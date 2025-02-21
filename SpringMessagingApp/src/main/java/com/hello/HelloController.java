@@ -10,6 +10,10 @@ public class HelloController {
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
+    @RequestMapping("/uc2")
+    public String sayHello(@RequestParam String name) {
+        return "Hello "+name+" from BridgeLabz";
+    }
 
-   
+
 }
