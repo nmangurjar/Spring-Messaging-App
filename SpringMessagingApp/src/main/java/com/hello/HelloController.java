@@ -14,6 +14,11 @@ public class HelloController {
     public String sayHello(@RequestParam String name) {
         return "Hello "+name+" from BridgeLabz";
     }
+    @RequestMapping("/uc3/{name}")
+    public String sayHelloByPath(@PathVariable String name) {
+        return "Hello "+name+" from BridgeLabz";
+    }
+
 
 
 }
