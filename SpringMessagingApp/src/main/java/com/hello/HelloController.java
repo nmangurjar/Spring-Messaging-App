@@ -19,9 +19,13 @@ public class HelloController {
         return "Hello "+name+" from BridgeLabz";
     }
 
-        @PostMapping("/uc4")
-        public String sayHello(@RequestBody UserDTO user) {
-            return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+    @PostMapping("/uc4")
+    public String sayHello(@RequestBody UserDTO user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
+        }
+        @RequestMapping("/uc5/{firstName}")
+        public String sayHello(@PathVariable String firstName ,@RequestParam String lastName){
+            return "Hello "+firstName+" "+lastName+" from BridgeLabz";
         }
     }
 
